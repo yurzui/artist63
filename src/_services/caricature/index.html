@@ -1,0 +1,55 @@
+---
+layout: default
+title: Шаржи на заказ в Самаре. Artist63.ru
+description: Заказ шаржа в Самаре. Услуги шаржиста на любой праздник - корпоратив, юбилей, свадьба
+keywords: портрет на заказ, шарж
+permalink: /services/caricature.html
+---
+
+<div class="l-page-level wall">
+  <section class="l-page-inner l-entry">
+    <div class="breadcrumbs"><a href="/">Главная</a><i>/</i><a href="/services/">Услуги и цены</a><i>/</i><span>Шаржи</span></div>
+    <h1>Шаржи в Самаре на заказ</h1>
+    <div class="caricature-text">
+        <img width="250" src="/img/artist-caricature.jpg" alt="">
+        <p>
+            На базе нашей мастерской мы сотрудничаем и с другими художниками.
+        </p>
+        <p>
+        Теперь мы предоставляем и <strong>услуги шаржиста</strong>. 
+        </p>
+        <p>
+            Шарж-отличный подарок друзьям, родным и коллегам!
+             Добрая и смешная карикатура всегда сможет поднять настроение и заставит улыбнуться.
+         </p>
+         <p>
+            Для Вас его создаст профессиональный <strong>шаржист Екатерина</strong>. Она имеет высшее художественное образование и большой опыт работы. С удовольствием выполнит для Вас уникальный, смешной и добрый шарж, прислушиваясь к вашим пожеланиям.
+        </p>
+        <p>
+            Мы можем организовать <strong>выезд шаржиста на Ваше мероприятие</strong> - свадьбу, корпоратив, юбилей и др.
+            Как <strong>заказать шарж</strong> и узнать его стоимость? <a rel="nofollow" target="_blank" href="http://vk.com/write126136587">Свяжитесь со мной</a>
+        </p>
+    </div>
+  </section>
+</div>
+<div class="l-content">
+    <h2>Примеры шаржей</h2>
+    <br>
+   <div id="portfolio" class="portfolio" itemscope itemtype="http://schema.org/ImageGallery">
+            {% assign sortedWorks = site.services | sort: 'date' | reverse %}
+            {% for work in sortedWorks %}
+            {% if work.img %}
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="work-wrapper">
+                    <a href="/gallery/big/{{work.img}}.jpg" data-index="{{j}}" class="lightbox" data-group="portfolio" data-sizes="{{work.imgBigWidth}}x{{work.imgBigHeight}}" itemprop="contentUrl">
+                        <img width="{{work.imgWidth}}" height="{{work.imgHeight}}" src="/gallery/{{work.img}}.jpg" alt="{{work.alt}}" itemprop="thumbnail"/>
+                        <div class="blur"></div>
+                    </a>
+                    <figcaption class="caption-text">
+                        <h3 itemprop="name">{{work.name}}</h3>
+                        <p itemprop="description"></p>
+                    </figcaption>
+                </figure>
+            {% endif %}
+            {% endfor %}
+    </div>
+</div>

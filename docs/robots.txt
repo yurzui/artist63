@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404.html
+
+Host: artist63.ru
+Sitemap: http://artist63.ru/sitemap.xml

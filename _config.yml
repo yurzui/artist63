@@ -1,0 +1,77 @@
+# Site settings
+title: Мастерская художника. Портрет на заказ по фото в Самаре
+email: your-email@domain2.com
+description: > # this means to ignore newlines until "baseurl:"
+  Портреты и картины на заказ в Самаре, а также уроки рисования от Надежды Зуевой.
+baseurl: "/" # the subpath of your site, e.g. /blog/
+source: ./src
+destination: ./docs
+exclude: ['*.js']
+url: "http://artist63.ru" # the base hostname & protocol for your site
+highlighter: null
+# Build settings
+markdown: kramdown
+
+navigation:
+ - anchor: Главная
+   url: /
+   class: 'home'
+ - anchor: Портфолио
+   url: /portfolio/
+   class: 'portfolio'
+ - anchor: Услуги и цены
+   url: /services/
+   class: 'services'
+ - anchor: О художнике
+   url: /about/
+   class: 'about'
+ - anchor: Блог
+   url: /blog/
+   class: 'blog'
+ - anchor: Контакты
+   url: /contacts/
+   class: 'contacts'
+
+lastworks:
+ - img: 'coal/vsroslaja-para'
+   imgAlt: 'Портрет взрослой пары'
+   title: 'Портрет пары, мягкие материалы А3'
+   infoTitle: 'Портрет любящей друг друга пары'
+   infoDescription: 'Мягкие материалы, А3'
+   bigImgSize: 418x604
+
+ - img: 'portret_molodoi_devushki'
+   imgAlt: 'Портрет девушки карандашом'
+   title: 'Современный портрет девушки карандашом,А4'
+   infoTitle: 'Современный портрет девушки карандашом'
+   infoDescription: 'Карандаш, А4'
+   bigImgSize: 707x1024
+
+ - img: 'oil/devuska-portret-maslom'
+   imgAlt: 'Портрет девушки маслом'
+   title: 'Современный портрет девушки маслом'
+   infoTitle: 'Портрет девушки'
+   infoDescription: 'Масло, 40x50'
+   bigImgSize: 707x1024
+
+ - img: 'Portret_rebenka_na_velosipede'
+   imgAlt: 'Портрет мальчика на велосипеде, масло'
+   title: 'Мальчик на велосипеде, 50x60'
+   infoTitle: 'Портрет мальчика на велосипеде'
+   infoDescription: 'Масло, 50x60'
+   bigImgSize: 435x630
+
+ - img: 'coal/portret-muzhchini-mjagkimi-materialami'
+   imgAlt: 'Портрет мужчины'
+   title: 'Портрет взрослого мужчины, мягкие материалы А3'
+   infoTitle: 'Портрет мужчины'
+   infoDescription: 'Мягкие материалы А3'
+   bigImgSize: 563x816
+
+collections:
+  portfolio:
+    output: true
+  services:
+    output: true
+
+

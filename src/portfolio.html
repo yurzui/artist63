@@ -1,0 +1,49 @@
+---
+layout: default
+title: Портфолио художника Надежды Зуевой. Портреты Самара
+description: Здесь Вы можете заказать оригинальный подарок - портрет по фото или картину маслом у профессионального художника-педагога Надежды Зуевой в Самаре
+keywords: портрет портфолио картина
+permalink: /portfolio/
+active: portfolio
+---
+
+	<div class="l-page-level wall">
+		<section class="l-page-inner l-entry clearfix">
+			<div class="breadcrumbs"><a href="/">Главная</a><i>/</i><span>Портфолио</span></div>
+			<h1>Портфолио художника Надежды Зуевой в Самаре</h1>
+			<p>
+					Если Вы не знаете, где и как заказать портрет в Самаре, или Вас просто интересует изобразительное искусство - добро пожаловать на мой персональный сайт. Я всегда рада Вашему заказу.
+					Здесь представлены работы из разных периодов моей жизни. Портреты карандашом, портреты и картины маслом, портреты цветными карандашами, портреты мягкими материалами и еще некоторые другие техники можно увидеть в моем портфолио.
+			</p>
+		</section>
+	</div>
+	<div class="l-content-portfolio">
+		<div class="filter-wrapper">
+				<ul class="filters">
+						<li data-filter="" class="selected"><span>Все работы</span></li>
+						<li data-filter="pencil"><span>Карандаш</span></li>
+						<li data-filter="colored-pencil"><span>Цветные карандаши</span></li>
+						<li data-filter="chalk"><span>Мягкие материалы</span></li>
+						<li data-filter="oil"><span>Масло</span></li>
+						<li data-filter="popart"><span>Поп-арт</span></li>
+				</ul>
+		</div>
+		<div id="portfolio" class="portfolio" itemscope itemtype="http://schema.org/ImageGallery">
+				{% assign sortedWorks = site.portfolio | sort: 'date' | reverse %}
+				{% for work in sortedWorks %}
+					<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="{{workClass}}work-wrapper {{work.style}}">
+						<a href="/gallery/big/{{work.img}}.jpg" data-index="{{j}}" title="{{work.name}}" class="lightbox" data-group="portfolio" data-sizes="{{work.imgBigWidth}}x{{work.imgBigHeight}}" itemprop="contentUrl">
+							<img width="{{work.imgWidth}}" height="{{work.imgHeight}}" src="/gallery/{{work.img}}.jpg" alt="{{work.alt}}" itemprop="thumbnail"/>
+							<div class="blur"></div>
+						</a>
+						<figcaption class="caption-text">
+							<h3 itemprop="name">{{work.name}}</h3>
+							<p itemprop="description">{{work.description}}</p>
+						</figcaption>
+					</figure>	
+				{% endfor %}
+		</div>
+ </div>
+
+
+ 

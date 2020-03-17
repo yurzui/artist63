@@ -1,0 +1,35 @@
+---
+layout: default
+title: 404 | Мастерская художника Надежды Зуевой в Самаре
+permalink: /404.html
+---
+
+<div class="l-page-level wall">
+  <section class="l-page-inner l-entry clearfix">
+    <h1>К сожалению, страница не найдена - 404</h1>  
+  </section>
+</div>
+ 
+<div class="l-page-level brown">
+  <div class="l-works">
+    <h2>Последние работы</h2>
+    {% for work in site.lastworks %}
+      <div href="/gallery/big/{{work.img}}.jpg" title="{{work.title}}" class="b-work-item__wrapper">
+        <div class="b-work-item">
+          <figure>
+            <img width="210" height="280" src="/gallery/{{work.img}}.jpg" alt="{{work.imgAlt}}" />
+          </figure>
+          <div class="b-work-item__description">
+              <div class="b-work-item__info">
+               {{work.infoTitle}}
+               <p>{{work.infoDescription}}</p>
+              </div>
+          </div> 
+          <div class="b-work-item__overlay"></div>
+        </div>
+      </div>
+    {% endfor %}
+      
+    <div class="b-button_centered "><a href="/portfolio/" class="btn btn_white">Все работы</a></div>
+  </div>   
+</div>

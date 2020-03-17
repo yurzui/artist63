@@ -1,0 +1,37 @@
+---
+layout: default
+title: Блог художника | Мастерская художника Надежды Зуевой в Самаре
+description: Интересные факты из жизни художника, ньюансы и тонкости профессии, блог о том, с чем сталкивается художник на своем жизненном пути
+keywords: портрет на заказ,художник,контакты,уроки рисования
+permalink: /blog/
+active: blog
+---
+
+
+<div class="l-page-level wall">
+  <section class="l-page-inner l-entry">
+    <div class="breadcrumbs"><a href="/">Главная</a><i>/</i><span>Блог</span></div>        
+    <h1>Блог художника Надежды</h1>
+    <p>Блог об особенностях моей творческой деятельности. Здесь я буду делиться полезными советами, рассказывать о том, что за профессия такая - художник....</p>
+  </section>
+</div>
+<div class="l-content l-blog-page clearfix">
+{% for post in site.posts %}
+<div class="post-preview">
+    <a class="post-image" href="{{ post.url }}"><img src="/{{ post.preview-img }}" alt="{{ post.title }}">
+    </a>
+    <h2 class="post-title">
+    <a href="{{ post.url }}"> {{ post.title }}
+     </a>
+    </h2>
+    {% if post.lead %}
+    <p class="post-description">
+        {{ post.lead }} <a href="{{ post.url | prepend: site.baseurl }}">Читать далее...
+      </a>
+    </p>
+    {% endif %}
+    <p class="post-meta">{{ post.time }}</p>
+</div>
+
+{% endfor %}
+</div>

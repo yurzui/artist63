@@ -1,0 +1,208 @@
+---
+layout: default
+description: Портреты и картины на заказ, а также уроки рисования от Надежды Зуевой. Самара и Самарская область
+keywords: портрет, карандаш, художник, самара
+active: home
+---
+<div class="l-page-level wall">
+  <section class="l-page-inner l-entry clearfix">
+    <img width="100" height="100" alt="Самарский художник Надежда Зуева" src="/img/artist.jpg"/>
+    <h1>Artist63 - сайт-портфолио самарского художника <b>Надежды Зуевой</b></h1>
+    <p>
+      Я рисую <b>карандашом</b> и мягкими материалами (<b>уголь</b>, <b>мел</b>, <b>сангина</b>, <b>сепия</b>), пишу <b>маслом</b>, а также
+    </p>
+    <p>помогаю людям раскрыть свой творческий потенциал - даю <b>уроки рисования</b></p>
+  </section>
+</div>
+<div id="main-slider" class="main-slider">
+  <div class="slide slide_portrait slide-current">
+      <h2>Портреты по фотографии</h2>
+      <div class="info">
+        <div class="info-item delay1">
+          Профессионально и качественно
+        </div>
+        <div class="info-item delay2">
+          На любой вкус
+        </div>  
+        <div class="info-item delay3">
+          По приемлемым ценам
+        </div>  
+      </div>
+      <div class="b-link"><a href="/portfolio/" class="btn">Перейти к портфолио</a></div>
+      <div class="img">
+        <img width="461" height="296" class="para" alt="Двойной портрет" src="/img/slide1_2.jpg"  />
+        <img width="200" height="383" alt="Портрет по фото, уголь, девушка" src="/img/slide1.png"  />
+      </div>
+  </div>
+  <div class="slide">
+      <h2>Картины на заказ</h2>
+      <div class="info">
+        <div class="info-item delay1">
+          Пейзажи
+        </div>
+        <div class="info-item delay2">
+          Натюрморты
+        </div>  
+        <div class="info-item delay3">
+          Копии картин
+        </div>  
+      </div>
+      <div class="b-link"><a href="/portfolio/#oil" class="btn">Посмотреть работы</a></div>
+      <div class="img">
+        <img width="461" height="382" src="/img/slide3.jpg" alt="Дама в шляпе" /></div>
+  </div>
+  <div class="slide slide-learn">
+      <h2>Уроки рисования</h2>
+      <div class="info">
+        <div class="info-item delay1">
+          Занятия с любого уровня подготовки
+        </div>
+        <div class="info-item delay2">
+          Индивидуальный подход к каждому ученику
+        </div>  
+        <div class="info-item delay3">
+          Получится даже у новичка
+        </div>  
+      </div>
+      <div class="b-link"><a href="/contacts/" class="btn">Записаться на урок</a></div>
+      <div class="img">
+        <img width="461" height="307" src="/img/slide4.jpg" alt="Мастерская самарского художника" />
+      </div>
+  </div>
+  <nav class="arrows">
+      <span class="arrows-prev"><i class="g-icon g-icon_left-arrow"></i></span>
+      <span class="arrows-next"><i class="g-icon g-icon_right-arrow"></i></span>
+  </nav>
+</div>
+<div class="l-page-level brown">
+  <div class="l-works">
+    <h2>Последние работы</h2>
+    <div class="swipe-gallery">
+   {% assign sortedWorks = site.portfolio | sort: 'date' | reverse %}
+        {% for work in sortedWorks limit: 9 %}
+      <figure class="b-work-item">
+        <a href="/gallery/big/{{work.img}}.jpg" data-size="{{work.imgBigWidth}}x{{work.imgBigHeight}}" class="b-work-item__image">
+          <img width="{{work.imgWidth}}" height="{{work.imgHeight}}" src="/gallery/{{work.img}}.jpg" alt="{{work.imgAlt}}" />
+        </a>
+        <figcaption class="caption-text">
+          <h3>{{work.name}}</h3>
+          <p>{{work.description}}</p>
+        </figcaption>
+      </figure>
+    {% endfor %}
+    </div>
+    <div class="b-button_centered "><a href="/portfolio/" class="btn btn_white">Все работы</a></div>
+  </div>   
+</div>
+<div class="l-facts l-content clearfix"> 
+    <h2>Почему Вам стоит обратиться ко мне?</h2>
+    <div class="col4">
+      <div class="fact">
+        <h3>Большой опыт работы</h3>
+         <p> с заказами - 6 лет (это и портреты, и пейзажи, и натюрморты и мн.др)</p>
+      </div>
+      <div class="fact">
+        <h3>Высшее художественное образование</h3>
+         <p> гарантировано высокое качество работ. Ваш заказ будет выполнен на том же уровне, что и примеры в моем портфолио</p>
+      </div>
+    </div>
+    <div class="col4 fact-artist">
+      <img width="380" height="612" src="/img/argument.jpg" alt="Художник Надежда Зуева">
+    </div>
+    <div class="col4">
+      <div class="fact">
+        <h3>Индивидуальный подход к каждому клиенту</h3>
+        <p>я стараюсь внимательно слушать и слЫшать клиента, чтобы учесть все индивидуальные пожелания, ньюансы и мелочи
+        </p>
+      </div>
+      <div class="fact">
+         <h3>Полностью ручная работа</h3>
+       <p>работа выполняется полностью вручную, "с душой", а это очень важно для подарка!</p>
+      </div>
+      <div class="fact">
+       <img width="132" height="124" alt="Подпись" class="subscribe" src="/img/subscribe.jpg"/> 
+      </div>
+    </div>
+</div>
+<div class="l-page-level brown">
+  <section class="l-page-inner l-services clearfix">
+    <h2>Мои техники</h2>
+    <div class="service-wrapper">
+      <div class="service">
+        <a title="Посмотреть работы" href="/portfolio/#pencil">
+          <img width="200" height="200" alt="Портрет девушки" src="/img/1.jpg"/></a>
+        <h3><a title="Посмотреть работы" href="/portfolio/#pencil">Карандаш</a> </h3>
+        <p>
+          С помощью карандаша можно создать очень выразительный и эффектный образ
+        </p>
+      </div>
+    </div>
+    <div class="service-wrapper">
+      <div class="service">
+        <a title="Посмотреть работы" href="/portfolio/#chalk">
+          <img width="200" height="200" alt="Портрет девушки мягкими материалами" src="/img/2.jpg"/></a>
+        <h3><a title="Посмотреть работы" href="/portfolio/#chalk">Мягкие материалы</a></h3>
+        <p>
+           Благородный оттенок сепии и сангины добавляет мягкости и теплоты в портрет
+         </p>
+      </div>
+    </div>
+    <div class="service-wrapper">
+      <div class="service">
+        <a title="Посмотреть работы" href="/portfolio/#oil">
+          <img width="200" height="200" alt="Деловой портрет маслом" src="/img/3.jpg"/></a>
+        <h3><a title="Посмотреть работы" href="/portfolio/#oil">Масло</a></h3>
+        <p>
+          Портреты маслом производят неизгладимое впечатление своей глубиной цвета и солидностью
+         </p>
+      </div>
+    </div>
+    <div class="service-wrapper">
+      <div class="service">
+        <a title="Посмотреть работы" href="/portfolio/#popart">
+          <img width="200" height="200" alt="Попарт портрет девушки" src="/img/4.jpg"/></a>
+        <h3><a title="Посмотреть работы" href="/portfolio/#popart">Поп-арт</a></h3>
+        <p>Декоративный портрет, создаваемый акриловыми красками, украсит любое помещение</p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="l-content-wrapper">
+  <div class="l-content clearfix">
+    <article class="hello">
+      <h2>Искусство никогда не устареет</h2>
+      <p>В наше время, когда миром правят цифровые технологии, никого уже не удивляют фотографии или компьютерная графика. Потому все большую ценность и уникальность приобретает ручное творчество, которое передает атмосферу, душевность и теплоту, Художник, создавая свои картины, вкладывает в них частичку своей души и свою энергию, картины наполняются жизнью и индивидуальностью.
+      </p>
+      <p>
+      Если заглянем в историю, мы поймем, что портрет всегда являлся семейной ценностью на долгую память, переходящей из поколения в поколение. Картина была признаком не только роскоши, но и хорошего вкуса ее обладателя, вносила в дом уют и неповторимую атмосферу.
+      </p>
+      <div class="quote">
+        <p><i class="g-icon g-icon_quote-left"></i>Кто нарисован хоть однажды, имеет право быть всегда.
+        </p>
+        <p class="author">Белла Ахатовна Ахмадулина</p>
+      </div>
+      <p>
+        Обратившись к нам, Вы сможете стать счастливым обладателем произведения искусства, созданного художником с душой и по всем Вашим пожеланиям. Мой большой опыт создания картин на заказ и высшее художественное образование поможет Вам приобрести картину Вашей мечты и осуществить самые необычные и интересные идеи!
+      </p>
+    </article>
+    <div class="infographic">
+      <div class="gallery-box swipe-gallery">
+          <figure>
+            <a href="/photo/big/masterskaja-hudozhnika.jpg" data-size="1280x853">
+              <img width="158" height="158" alt="Урок рисования" src="/photo/masterskaja-hudozhnika.jpg"/>
+            </a>
+          </figure>
+          <figure>
+            <a href="/photo/big/kartina-v-spalne.jpg" data-size="453x604">
+              <img width="158" height="158" alt="Картина в интрерьере" src="/photo/kartina-v-spalne.jpg"/>
+            </a>
+          </figure>
+          <figure>
+            <a href="/photo/big/kartina-portret-svadba.jpg" data-size="1280x853">
+              <img width="332" height="332" alt="Художник в работе" src="/photo/kartina-portret-svadba.jpg">
+            </a>
+          </figure>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+---
+layout: article_layout
+---
+<article>
+<header class="article-header" style="background-image: url('/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="article-container">
+      <div class="article-heading">
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+          <h2 class="subheading">{{ page.subtitle }}</h2>
+          {% endif %}
+          <span class="meta">Мастерская художника.<br/>Портрет на заказ по фото в Самаре</span>
+          <time datetime="2015-03-22">{{ page.time }}</time>
+      </div>
+    </div>
+</header>
+	<div class="article-container clearfix">
+		<div class="article__menu-wrapper">
+			<div class="article__menu">
+				<ol>
+					{% for hash in page.hash %}
+					<li>
+					 <a class="scroll" href="#{{hash.url}}">{{ hash.anchor }}</a>
+					</li>
+					{% endfor %}
+				</ol> 
+			</div>
+		</div>
+		<div class="article__content">
+			{{ content }}
+		</div>
+	</div>
+</article>

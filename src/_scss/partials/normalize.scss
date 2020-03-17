@@ -1,0 +1,46 @@
+a,
+article,
+aside, audio, b, blockquote, body, caption, dd,
+div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
+header, hgroup, html, i, img, label, legend, li, mark, menu, nav, ol, output, p,
+section, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, time, tr, u, ul, video {
+    font: inherit;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+
+a {
+  color: #333;
+}
+
+article, aside, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  &:before, &:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+
+b {font-weight:bold;}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

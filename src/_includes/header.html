@@ -1,0 +1,17 @@
+<div class="l-header-wrapper brown">
+  <header class="l-header clearfix">
+    <div class="b-logo">
+      <a title="На главную" href="/">Artist63
+        <span>Мастерская художника в Самаре</span>
+      </a>
+     </div>
+    <nav class="b-top-menu">
+      <ul>{% for link in site.navigation %}{% if link.class == page.active %}<li class="active"><span><i class="g-menu-icon g-menu-icon_{{ link.class }}"></i>{{ link.anchor }}</span>{% else %}<li itemscope itemtype="http://schema.org/SiteNavigationElement" ><a href="{{ link.url }}" itemprop="url"><i class="g-menu-icon g-menu-icon_{{ link.class }}"></i><span itemprop="name">{{ link.anchor }}</span></a>{% endif %}</li>{% endfor %}</ul> 
+    </nav>
+    <span class="menu-toggler">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </span>
+  </header>
+</div>
